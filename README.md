@@ -1,1 +1,7 @@
 # WorldOfSoftware
+
+
+Godot ref :
+Dialog Box - Terry / Ben
+https://www.youtube.com/watch?v=xCl1AZINouA
+https://www.youtube.com/watch?v=8HOmLNuuccs - JSON loading
