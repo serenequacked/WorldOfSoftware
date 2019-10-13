@@ -1,0 +1,119 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Cave-Story.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Characters.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Char1/Jump (1).png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Char1/Jump (2).png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Char1/Jump (3).png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Char1/Jump (4).png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Char1/Jump (5).png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Char1/Jump (6).png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Char1/Jump (7).png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Char1/Jump (8).png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Char1/Run (1).png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Char1/Run (2).png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Char1/Run (3).png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Char1/Run (4).png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Char1/Run (5).png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Char1/Run (6).png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Char1/Run (7).png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Char1/Run (8).png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Char2/Jump (1).png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Char2/Jump (2).png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Char2/Jump (3).png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Char2/Jump (4).png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Char2/Jump (5).png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Char2/Jump (6).png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Char2/Jump (7).png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Char2/Jump (8).png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Char2/Run (1).png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Char2/Run (2).png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Char2/Run (3).png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Char2/Run (4).png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Char2/Run (5).png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Char2/Run (6).png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Char2/Run (7).png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Char2/Run (8).png" type="Texture" id=34]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 122.673, 188.073 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 118.398, 189.007 )
+
+[node name="CharacterSelection" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 61.8244
+margin_top = 146.619
+margin_right = 524.824
+margin_bottom = 380.619
+rect_scale = Vector2( 1.01877, 0.884944 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "Choose your character"
+
+[node name="Characters" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Char1Area2D" type="Area2D" parent="Characters"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Char1" type="AnimatedSprite" parent="Characters/Char1Area2D"]
+position = Vector2( 154.776, 555.203 )
+scale = Vector2( 0.748, 0.71563 )
+frames = SubResource( 2 )
+animation = "run"
+playing = true
+
+[node name="Char1Collision" type="CollisionShape2D" parent="Characters/Char1Area2D"]
+position = Vector2( 153.899, 562.74 )
+scale = Vector2( 0.996944, 1 )
+shape = SubResource( 3 )
+
+[node name="Char2Area2D" type="Area2D" parent="Characters"]
+
+[node name="Char2" type="AnimatedSprite" parent="Characters/Char2Area2D"]
+position = Vector2( 442.508, 555.203 )
+scale = Vector2( 0.748, 0.716 )
+frames = SubResource( 4 )
+animation = "run"
+frame = 3
+playing = true
+
+[node name="Char2Collison" type="CollisionShape2D" parent="Characters/Char2Area2D"]
+position = Vector2( 442.508, 562.74 )
+shape = SubResource( 5 )
+[connection signal="input_event" from="Characters/Char1Area2D" to="Characters" method="_on_Char1Area2D_input_event"]
+[connection signal="input_event" from="Characters/Char2Area2D" to="Characters" method="_on_Char2Area2D_input_event"]

@@ -1,0 +1,130 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Background/background.png" type="Texture" id=1]
+[ext_resource path="res://background_camera.gd" type="Script" id=2]
+[ext_resource path="res://TextDisplay.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Idle (1).png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Idle (2).png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Idle (3).png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Idle (4).png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Idle (5).png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Idle (6).png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Idle (7).png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Idle (8).png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Idle (9).png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Idle (10).png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Dead (1).png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Dead (2).png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Dead (3).png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Dead (4).png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Dead (5).png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Dead (6).png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Dead (7).png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Dead (8).png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Dead (9).png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Dead (10).png" type="Texture" id=23]
+[ext_resource path="res://Cave-Story.ttf" type="DynamicFontData" id=24]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=2]
+
+[sub_resource type="Theme" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 24 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Cave-Story.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = SubResource( 5 )
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -128.878, -2.26091 )
+scale = Vector2( 0.699492, 1.42215 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 2028, 1024 )
+
+[node name="background_camera" type="Camera2D" parent="Background/ParallaxBackground"]
+anchor_mode = 0
+current = true
+smoothing_enabled = true
+script = ExtResource( 2 )
+
+[node name="TextDisplay" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 270.591
+margin_top = 624.879
+margin_right = 270.591
+margin_bottom = 624.879
+script = ExtResource( 3 )
+__meta__ = {
+"__editor_plugin_screen__": "2D"
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="TextDisplay"]
+position = Vector2( 18.1836, -365.457 )
+frames = SubResource( 1 )
+animation = "dead"
+frame = 9
+playing = true
+
+[node name="ColorRect" type="ColorRect" parent="TextDisplay"]
+material = SubResource( 2 )
+use_parent_material = true
+margin_left = -248.0
+margin_top = -38.0
+margin_right = 273.0
+margin_bottom = 187.0
+theme = SubResource( 3 )
+color = Color( 0.192157, 0.192157, 0.192157, 1 )
+
+[node name="Timer" type="Timer" parent="TextDisplay/ColorRect"]
+wait_time = 0.05
+autostart = true
+
+[node name="dialogue" type="RichTextLabel" parent="TextDisplay/ColorRect"]
+margin_left = 29.5263
+margin_top = 57.1904
+margin_right = 470.526
+margin_bottom = 124.19
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+
+[node name="npc_name" type="RichTextLabel" parent="TextDisplay/ColorRect"]
+margin_left = 9.25989
+margin_top = 17.7921
+margin_right = 312.26
+margin_bottom = 65.7921
+custom_fonts/normal_font = SubResource( 6 )
+[connection signal="timeout" from="TextDisplay/ColorRect/Timer" to="TextDisplay" method="_on_Timer_timeout"]
