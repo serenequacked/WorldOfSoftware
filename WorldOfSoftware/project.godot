@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="WorldOfSoftware"
-run/main_scene="res://CharacterSelection.tscn"
+run/main_scene="res://Scenes/CharacterSelection/CharacterSelection.tscn"
 boot_splash/fullsize=false
 config/icon="res://icon.png"
 

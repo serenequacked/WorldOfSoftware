@@ -1,7 +1,7 @@
 [gd_scene load_steps=40 format=2]
 
-[ext_resource path="res://Cave-Story.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Characters.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Cave-Story.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/CharacterSelection/Characters.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Char1/Jump (1).png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Char1/Jump (2).png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Char1/Jump (3).png" type="Texture" id=5]
@@ -74,10 +74,10 @@ extents = Vector2( 118.398, 189.007 )
 [node name="CharacterSelection" type="Node2D"]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 61.8244
-margin_top = 146.619
-margin_right = 524.824
-margin_bottom = 380.619
+margin_left = 67.7279
+margin_top = 151.255
+margin_right = 530.728
+margin_bottom = 434.255
 rect_scale = Vector2( 1.01877, 0.884944 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "Choose your character"
@@ -95,6 +95,7 @@ position = Vector2( 154.776, 555.203 )
 scale = Vector2( 0.748, 0.71563 )
 frames = SubResource( 2 )
 animation = "run"
+frame = 7
 playing = true
 
 [node name="Char1Collision" type="CollisionShape2D" parent="Characters/Char1Area2D"]
@@ -109,7 +110,7 @@ position = Vector2( 442.508, 555.203 )
 scale = Vector2( 0.748, 0.716 )
 frames = SubResource( 4 )
 animation = "run"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Char2Collison" type="CollisionShape2D" parent="Characters/Char2Area2D"]
