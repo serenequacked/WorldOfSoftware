@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Quiz/Question.gd" type="Script" id=1]
+
+[node name="mainNode" type="Node2D"]
+script = ExtResource( 1 )
+questionTextPath = NodePath("Label")
+option1Path = NodePath("ButtonLayer/Option 1")
+option2Path = NodePath("ButtonLayer/Option 2")
+option3Path = NodePath("ButtonLayer/Option 3")
+option4Path = NodePath("ButtonLayer/Option 4")
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.52979
+margin_top = 10.2649
+margin_right = 567.53
+margin_bottom = 130.265
+text = "Question"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="ButtonLayer" type="CanvasLayer" parent="."]
+
+[node name="Option 1" type="Button" parent="ButtonLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -567.0
+margin_top = -864.0
+margin_right = -7.0
+margin_bottom = -744.0
+text = "1"
+
+[node name="Option 2" type="Button" parent="ButtonLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -567.0
+margin_top = -724.0
+margin_right = -7.0
+margin_bottom = -604.0
+text = "2"
+
+[node name="Option 3" type="Button" parent="ButtonLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -567.0
+margin_top = -584.0
+margin_right = -7.0
+margin_bottom = -464.0
+text = "3"
+
+[node name="Option 4" type="Button" parent="ButtonLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -567.0
+margin_top = -444.0
+margin_right = -7.0
+margin_bottom = -324.0
+text = "4"
