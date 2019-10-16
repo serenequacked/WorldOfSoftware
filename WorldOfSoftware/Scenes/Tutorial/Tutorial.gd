@@ -1,27 +1,33 @@
 extends Node2D
-onready var npc_dialogue = get_node("DialogueUI/NpcDialogue")
-onready var back_button = get_node("Button")
+
+onready var dialogue = preload("res://Scenes//Dialouge/Dialogue.tscn")
+onready var world1 = preload("res://Scenes//Worlds/World1.tscn")
+onready var world2 = preload("res://Scenes//Worlds/World2.tscn")
+onready var world3 = preload("res://Scenes//Worlds/World3.tscn")
+onready var world4 = preload("res://Scenes//Worlds/World4.tscn")
 
 func _ready():
-	npc_dialogue.set_visible_characters(0)
+	InstanceScene(dialogue)
+	InstanceScene(world1)
+	InstanceLockedWorld(world2)
+	InstanceLockedWorld(world3)
+	InstanceLockedWorld(world4)
+	return
 
-func _on_TextTimer_timeout():
-	npc_dialogue.set_visible_characters(npc_dialogue.get_visible_characters()+1)
+func InstanceScene(scene):
+	var instance_scene = scene.instance()
+	add_child(instance_scene)
 
+func InstanceLockedWorld(scene):
+	var instance_scene = scene.instance()
+	instance_scene.modulate = Color(0, 0, 0, 1)
 
-func _input(event):
-	if event is InputEventMouseButton:
-		if event.pressed:
-			npc_dialogue.set_visible_characters(0)
-			npc_dialogue.set_bbcode("SELECT WORLD WORLWDORWLOWROWLDWRODLWROLD")
+	add_child(instance_scene)
 
-
-func _on_World1Area_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		if event.is_pressed():
-			get_tree().change_scene("res://Scenes/CharacterSelection/CharacterSelection.tscn")
-
-
-func _on_BackButton_pressed():
-	 print ("Hello")
+func _on_BacKButton_pressed():
 	 get_tree().change_scene("res://Scenes/CharacterSelection/CharacterSelection.tscn")
+
+
+
+
+
