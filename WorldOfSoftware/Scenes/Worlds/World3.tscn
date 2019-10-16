@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://World3Root.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Worlds/World3.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Cave-Story.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/Pads/Pad_03_2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Worlds/World.gd" type="Script" id=4]
