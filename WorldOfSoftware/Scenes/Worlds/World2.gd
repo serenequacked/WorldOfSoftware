@@ -12,9 +12,15 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
+func disableCollison():
+	get_node("World2Area/CollisionShape2D").disabled = true
+	
 func _on_World2Area_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
 			get_node("World2Area/World/WorldCamera").current = true
 			get_node("World2Area/World").zoom_in()
+			$Timer.set_wait_time(0.7)
+			$Timer.start() 
+			yield($Timer, "timeout") 
+			get_tree().change_scene("res://Scenes/CharacterSelection/CharacterSelection.tscn")

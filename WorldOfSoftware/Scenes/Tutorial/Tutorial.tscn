@@ -1,8 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Tutorial/Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Cave-Story.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/left.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Worlds/World1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Worlds/World2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Worlds/World3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Worlds/World4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Dialouge/Dialogue.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 135
@@ -27,4 +32,19 @@ margin_bottom = 747.0
 rect_scale = Vector2( 0.1, 0.1 )
 icon = ExtResource( 3 )
 flat = true
+
+[node name="World1Root" parent="." instance=ExtResource( 4 )]
+
+[node name="World2Root" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0, 10 )
+
+[node name="World3Root" parent="." instance=ExtResource( 6 )]
+modulate = Color( 0, 0, 0, 1 )
+
+[node name="World4Root" parent="." instance=ExtResource( 7 )]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0, -20 )
+
+[node name="Dialogue" parent="." instance=ExtResource( 8 )]
 [connection signal="pressed" from="BacKButton" to="." method="_on_BacKButton_pressed"]

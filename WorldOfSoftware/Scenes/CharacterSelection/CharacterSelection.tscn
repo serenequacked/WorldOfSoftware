@@ -95,7 +95,6 @@ position = Vector2( 154.776, 555.203 )
 scale = Vector2( 0.748, 0.71563 )
 frames = SubResource( 2 )
 animation = "run"
-frame = 7
 playing = true
 
 [node name="Char1Collision" type="CollisionShape2D" parent="Characters/Char1Area2D"]
@@ -110,7 +109,7 @@ position = Vector2( 442.508, 555.203 )
 scale = Vector2( 0.748, 0.716 )
 frames = SubResource( 4 )
 animation = "run"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Char2Collison" type="CollisionShape2D" parent="Characters/Char2Area2D"]
