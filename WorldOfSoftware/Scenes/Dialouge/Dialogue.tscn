@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Dialouge/Dialogue.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Char1/Idle (1).png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Cat/Idle (1).png" type="Texture" id=2]
 [ext_resource path="res://Fonts/Cave-Story.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -23,11 +23,8 @@ margin_left = 20.0
 margin_top = 750.0
 margin_right = 549.0
 margin_bottom = 910.0
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="NpcIcon" type="Sprite" parent="DialoguePanel"]
+[node name="NpcSprite" type="Sprite" parent="DialoguePanel"]
 show_behind_parent = true
 position = Vector2( 89.9999, -30 )
 scale = Vector2( 0.595598, 0.515907 )
@@ -51,8 +48,15 @@ margin_top = 39.037
 margin_right = 540.0
 margin_bottom = 159.037
 custom_fonts/normal_font = SubResource( 2 )
-text = "Select world select world select world select world select world select world"
+
+[node name="Next" type="Button" parent="DialoguePanel"]
+margin_left = 444.388
+margin_top = 104.06
+margin_right = 517.388
+margin_bottom = 147.06
+text = "Next"
 [connection signal="gui_input" from="DialoguePanel" to="." method="_on_DialoguePanel_gui_input"]
 [connection signal="timeout" from="DialoguePanel/TextTimer" to="." method="_on_TextTimer_timeout"]
 [connection signal="gui_input" from="DialoguePanel/NpcName" to="." method="_on_NpcName_gui_input"]
 [connection signal="gui_input" from="DialoguePanel/NpcDialogue" to="." method="_on_NpcDialogue_gui_input"]
+[connection signal="gui_input" from="DialoguePanel/Next" to="." method="_on_Next_gui_input"]

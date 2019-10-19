@@ -21,4 +21,4 @@ func _on_World1Area_input_event(viewport, event, shape_idx):
 			$Timer.set_wait_time(0.7)
 			$Timer.start() 
 			yield($Timer, "timeout") 
-			get_tree().change_scene("res://Scenes/CharacterSelection/CharacterSelection.tscn")
+			get_tree().change_scene("res://Scenes//Worlds//World1Levels.tscn")

@@ -12,7 +12,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func disableCollison():
+func disable_collison():
 	get_node("World2Area/CollisionShape2D").disabled = true
 	
 func _on_World2Area_input_event(viewport, event, shape_idx):

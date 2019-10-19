@@ -13,6 +13,4 @@ onready  var starImage=get_node("MasteryPanel/brownBorder/Table/RatingStar")
 #onready var Star=get_node("MasteryPanel/brownBorder/Table/Points")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
-	
-	
+	return

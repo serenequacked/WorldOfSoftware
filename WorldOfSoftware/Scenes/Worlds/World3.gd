@@ -8,7 +8,7 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
-func disableCollison():
+func disable_collison():
 	get_node("World3Area/CollisionShape2D").disabled = true
 
 

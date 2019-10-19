@@ -7,7 +7,7 @@ onready var char2 = get_node("Char2Area2D/Char2")
 func _ready():
 	pass # Replace with function body.
 
-func ChangeScene():
+func change_scene():
 	yield(get_tree().create_timer(1.2), "timeout")
 	get_tree().change_scene("res://Scenes/Tutorial/Tutorial.tscn")
 
@@ -16,11 +16,11 @@ func _on_Char1Area2D_input_event(viewport, event, shape_idx):
 		if event.is_pressed():
 			char1.play("jump")
 			get_node("Char2Area2D/Char2Collison").disabled = true
-			ChangeScene()
+			change_scene()
 			
 func _on_Char2Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
 			char2.play("jump")
 			get_node("Char1Area2D/Char1Collision").disabled = true
-			ChangeScene()
+			change_scene()

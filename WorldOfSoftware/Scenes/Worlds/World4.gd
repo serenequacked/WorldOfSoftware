@@ -8,7 +8,7 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
-func disableCollison():
+func disable_collison():
 	get_node("World4Area/CollisionShape2D").disabled = true
 
 func _on_World4Area_input_event(viewport, event, shape_idx):

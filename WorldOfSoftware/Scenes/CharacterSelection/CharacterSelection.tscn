@@ -2,38 +2,38 @@
 
 [ext_resource path="res://Fonts/Cave-Story.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/CharacterSelection/Characters.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/Char1/Jump (1).png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Char1/Jump (2).png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Char1/Jump (3).png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Char1/Jump (4).png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Char1/Jump (5).png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Char1/Jump (6).png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Char1/Jump (7).png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Char1/Jump (8).png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Char1/Run (1).png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Char1/Run (2).png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Char1/Run (3).png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Char1/Run (4).png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Char1/Run (5).png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Char1/Run (6).png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Char1/Run (7).png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Char1/Run (8).png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Char2/Jump (1).png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Char2/Jump (2).png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Char2/Jump (3).png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Char2/Jump (4).png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Char2/Jump (5).png" type="Texture" id=23]
-[ext_resource path="res://Sprites/Char2/Jump (6).png" type="Texture" id=24]
-[ext_resource path="res://Sprites/Char2/Jump (7).png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Char2/Jump (8).png" type="Texture" id=26]
-[ext_resource path="res://Sprites/Char2/Run (1).png" type="Texture" id=27]
-[ext_resource path="res://Sprites/Char2/Run (2).png" type="Texture" id=28]
-[ext_resource path="res://Sprites/Char2/Run (3).png" type="Texture" id=29]
-[ext_resource path="res://Sprites/Char2/Run (4).png" type="Texture" id=30]
-[ext_resource path="res://Sprites/Char2/Run (5).png" type="Texture" id=31]
-[ext_resource path="res://Sprites/Char2/Run (6).png" type="Texture" id=32]
-[ext_resource path="res://Sprites/Char2/Run (7).png" type="Texture" id=33]
-[ext_resource path="res://Sprites/Char2/Run (8).png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Cat/Jump (1).png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Cat/Jump (2).png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Cat/Jump (3).png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Cat/Jump (4).png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Cat/Jump (5).png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Cat/Jump (6).png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Cat/Jump (7).png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Cat/Jump (8).png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Cat/Run (1).png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Cat/Run (2).png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Cat/Run (3).png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Cat/Run (4).png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Cat/Run (5).png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Cat/Run (6).png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Cat/Run (7).png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Cat/Run (8).png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Dog/Jump (1).png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Dog/Jump (2).png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Dog/Jump (3).png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Dog/Jump (4).png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Dog/Jump (5).png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Dog/Jump (6).png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Dog/Jump (7).png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Dog/Jump (8).png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Dog/Run (1).png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Dog/Run (2).png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Dog/Run (3).png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Dog/Run (4).png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Dog/Run (5).png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Dog/Run (6).png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Dog/Run (7).png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Dog/Run (8).png" type="Texture" id=34]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -95,6 +95,7 @@ position = Vector2( 154.776, 555.203 )
 scale = Vector2( 0.748, 0.71563 )
 frames = SubResource( 2 )
 animation = "run"
+frame = 3
 playing = true
 
 [node name="Char1Collision" type="CollisionShape2D" parent="Characters/Char1Area2D"]
@@ -109,7 +110,7 @@ position = Vector2( 442.508, 555.203 )
 scale = Vector2( 0.748, 0.716 )
 frames = SubResource( 4 )
 animation = "run"
-frame = 3
+frame = 6
 playing = true
 
 [node name="Char2Collison" type="CollisionShape2D" parent="Characters/Char2Area2D"]
