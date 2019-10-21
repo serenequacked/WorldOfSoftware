@@ -14,10 +14,11 @@ onready var option4 = get_node(option4Path)
 
 #sample qns
 #FORMAT: {questionText, option1, option2, option3, option4, answerOption}
-var qn1 = ["Question 1 Text","Q1 Opt1", "Q1 Opt2","Q1 Opt1","Q1 Opt3", 1] 
-var qn2 = ["Question 2 Text","Q2 Opt1", "Q2 Opt2","Q2 Opt1","Q2 Opt3", 1] 
-var qn3 = ["Question 3 Text","Q3 Opt1", "Q3 Opt2","Q3 Opt1","Q3 Opt3", 1] 
-var qnsArr = [qn1,qn2,qn3]
+var qn1 = ["Question 1 Text","Q1 Opt1", "Q1 Opt2","Q1 Opt3","Q1 Opt3", 1] 
+var qn2 = ["Question 2 Text","Q2 Opt1", "Q2 Opt2","Q2 Opt3","Q2 Opt4", 1] 
+var qn3 = ["Question 3 Text","Q3 Opt1", "Q3 Opt2",null,null, 1] 
+var qn4 = ["Question 4 Text","Q4 Opt1", "Q4 Opt2",null,null, 1] 
+var qnsArr = [qn1,qn2,qn3,qn4]
 
 var score = 0
 var answer = 0 #set answer based on database
@@ -26,6 +27,8 @@ signal correctResponse
 
 func _ready():
 	for i in range(0, qnsArr.size()):
+		if qnsArr[i][3] == null:
+			options = 2
 		set_question(qnsArr[i][0],qnsArr[i][1],qnsArr[i][2],qnsArr[i][3],qnsArr[i][4],qnsArr[i][5])
 		yield(self,"correctResponse")
 	get_tree().quit() # will quit game for now
