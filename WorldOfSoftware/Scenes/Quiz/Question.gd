@@ -14,6 +14,7 @@ onready var option4 = get_node(option4Path)
 
 #sample qns
 #FORMAT: {questionText, option1, option2, option3, option4, answerOption}
+#OVERALL FORMAT: {world, section, level, questionText, option1, option2, option3, option4, answerOption}
 var qn1 = ["Question 1 Text","Q1 Opt1", "Q1 Opt2","Q1 Opt3","Q1 Opt3", 1] 
 var qn2 = ["Question 2 Text","Q2 Opt1", "Q2 Opt2","Q2 Opt3","Q2 Opt4", 1] 
 var qn3 = ["Question 3 Text","Q3 Opt1", "Q3 Opt2",null,null, 1] 
