@@ -26,9 +26,9 @@ scale = Vector2( 0.150651, 0.20109 )
 texture = ExtResource( 2 )
 
 [node name="Levels" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Level1" type="Sprite" parent="Levels"]
+editor/display_folded = true
 position = Vector2( 128.432, 321.16 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 3 )
