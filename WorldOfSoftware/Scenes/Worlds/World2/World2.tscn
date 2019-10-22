@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/Worlds/WorldCamera.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Bonus_Items/Jump_Bonus_02.png" type="Texture" id=5]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 120, 170 )
 
 [node name="World2Root" type="Node2D"]
@@ -34,7 +34,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World2Area"]
 position = Vector2( 430, 410 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 [connection signal="input_event" from="World2Area" to="." method="_on_World2Area_input_event"]
