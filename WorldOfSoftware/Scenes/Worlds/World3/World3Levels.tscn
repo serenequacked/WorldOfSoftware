@@ -1,33 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Worlds/World3/World3Levels.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Worlds/WorldLevels.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Worlds/World3/Header.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Worlds/World3/Window.png" type="Texture" id=4]
 
 [node name="World3Levels" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="LevelSelection" parent="." instance=ExtResource( 2 )]
-self_modulate = Color( 0, 0, 0, 1 )
-
-[node name="Header" type="Sprite" parent="."]
-position = Vector2( 290.536, 171.966 )
-scale = Vector2( 0.505917, 0.589543 )
-texture = ExtResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-show_behind_parent = true
-margin_left = -14.0
-margin_top = -41.0
-margin_right = 600.0
-margin_bottom = 1281.0
-texture = ExtResource( 4 )
-expand = true
-
-[node name="Sprite" type="Sprite" parent="."]
-show_behind_parent = true
-position = Vector2( 294.531, 590.776 )
-scale = Vector2( 0.549618, 0.946127 )
-texture = ExtResource( 4 )

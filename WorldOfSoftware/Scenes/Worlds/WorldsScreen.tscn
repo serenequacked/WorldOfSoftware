@@ -38,7 +38,7 @@ position = Vector2( 0, -12.5876 )
 position = Vector2( -7.55255, 27.6927 )
 
 [node name="World4Root" parent="." instance=ExtResource( 6 )]
-position = Vector2( 24.5014, 32.0125 )
+position = Vector2( 2.51752, 2.51746 )
 
 [node name="Dialogue" parent="." instance=ExtResource( 7 )]
 visible = false
@@ -63,17 +63,17 @@ text = "World 2
 
 [node name="World3" type="Label" parent="."]
 margin_left = 83.0782
-margin_top = 581.878
-margin_right = 233.078
-margin_bottom = 660.878
+margin_top = 591.618
+margin_right = 230.078
+margin_bottom = 670.618
 custom_fonts/font = SubResource( 2 )
 text = "World 3"
 
 [node name="World4" type="Label" parent="."]
 margin_left = 365.041
-margin_top = 576.843
-margin_right = 515.041
-margin_bottom = 655.843
+margin_top = 586.583
+margin_right = 512.041
+margin_bottom = 665.583
 custom_fonts/font = SubResource( 2 )
 text = "World 4
 "
