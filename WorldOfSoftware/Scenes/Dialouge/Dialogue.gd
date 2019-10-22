@@ -9,12 +9,16 @@ var sprite_path = "res://Sprites//"
 var sprite_type =".png"
 var data
 var count =1
+var file
 
 func _ready():
 	return
 
-func display_dialogue(fname):
-	data = json.load_file(fname)
+func set_file(file_name):
+	file = file_name
+
+func display_dialogue():
+	data = json.load_file(dialogue_path+file)
 	display_npc()
 
 func display_npc():
