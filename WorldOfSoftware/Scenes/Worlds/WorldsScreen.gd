@@ -5,7 +5,8 @@ onready var npc_dialogue = get_node("Dialogue")
 var file_name = "tutorial.json"
 
 func _ready():
-	var tut_status = tut.get_status()
+	#var tut_status = tut.get_status()
+	var tut_status = true
 	#if user has no records of World1 level 1 
 	#Disable all worlds other than world 1 and start tutorial dialogue
 	if tut_status == false:
