@@ -3,7 +3,7 @@ extends Node2D
 onready var char1 = get_node("Char1Area2D/Char1")
 onready var char2 = get_node("Char2Area2D/Char2")
 
-
+#test
 func _ready():
 	pass # Replace with function body.
 
