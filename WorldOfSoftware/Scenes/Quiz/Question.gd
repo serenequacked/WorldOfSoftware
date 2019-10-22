@@ -48,7 +48,7 @@ var world2_Image = load("res://Assets//Quiz//background2.png")
 var popupImage = load("res://Assets//Quiz//warning.png")
 
 func _ready():	
-	create_Btn()
+	initiate()
 	for i in range(0, qnsArr.size()):
 		if qnsArr[i][0] == 1:
 			worldBG.texture = world1_Image
@@ -62,7 +62,7 @@ func _ready():
 		yield(self,"correctResponse")
 	get_tree().quit() # will quit game for now
 
-func create_Btn():
+func initiate():
 	popup.set_normal_texture(popupImage)
 	option1.set_normal_texture(btn)
 	option2.set_normal_texture(btn)
