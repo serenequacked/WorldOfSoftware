@@ -9,7 +9,10 @@ export (NodePath) var optionLabel1
 export (NodePath) var optionLabel2
 export (NodePath) var optionLabel3
 export (NodePath) var optionLabel4
-export (NodePath) var w1bg
+export (NodePath) var background
+export (NodePath) var popupDialog
+export (NodePath) var popupLabel
+export (NodePath) var scoreLabel
 
 onready var questionText = get_node(questionTextPath)
 onready var option1 = get_node(optionBtn1)
@@ -20,7 +23,10 @@ onready var optionTxt1 = get_node(optionLabel1)
 onready var optionTxt2 = get_node(optionLabel2)
 onready var optionTxt3 = get_node(optionLabel3)
 onready var optionTxt4 = get_node(optionLabel4)
-onready var world1BG = get_node(w1bg)
+onready var worldBG = get_node(background)
+onready var popup = get_node(popupDialog)
+onready var popupTxt = get_node(popupLabel)
+onready var scoreTxt = get_node(scoreLabel)
 
 #sample qns
 #FORMAT: {questionText, option1, option2, option3, option4, answerOption}
@@ -39,15 +45,16 @@ signal correctResponse
 var btn = load("res://Assets//Quiz//medium.png")
 var world1_Image = load("res://Assets//Quiz//background1.png")
 var world2_Image = load("res://Assets//Quiz//background2.png")
+var popupImage = load("res://Assets//Quiz//warning.png")
 
 func _ready():	
 	create_Btn()
 	for i in range(0, qnsArr.size()):
 		if qnsArr[i][0] == 1:
-			world1BG.texture = world1_Image
+			worldBG.texture = world1_Image
 		
 		if qnsArr[i][0] == 2:
-			world1BG.texture = world2_Image
+			worldBG.texture = world2_Image
 			
 		if qnsArr[i][6] == null:
 			options = 2
@@ -56,6 +63,7 @@ func _ready():
 	get_tree().quit() # will quit game for now
 
 func create_Btn():
+	popup.set_normal_texture(popupImage)
 	option1.set_normal_texture(btn)
 	option2.set_normal_texture(btn)
 	option3.set_normal_texture(btn)
@@ -78,13 +86,26 @@ func set_question(qnText,opt1,opt2,opt3,opt4,ans):
 func checkAns(selected, answer):
 	if selected == answer:
 		score = score + 1;
-		print("Correct! Your score is ")
-		print(score)
+		scoreTxt.set_text(str(score))
+		popupDialog(true)
 		emit_signal("correctResponse")
 	else:
-		print("Wrong! Please try again")
+
+		popupDialog(false)
+
+func popupDialog(check):
+	if check == true:
+		popupTxt.set_text("CORRECT!")
+	else: 
+		popupTxt.set_text("WRONG!")
+	popup.show()
+	popupTxt.show()
+	yield(get_tree().create_timer(0.7),"timeout")
+	popup.hide()
+	popupTxt.hide()
 
 func _on_TextureButton1_pressed():
+	
 	checkAns(1, answer);
 	pass # Replace with function body.
 
