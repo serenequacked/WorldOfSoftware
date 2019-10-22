@@ -1,0 +1,235 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Worlds/World1Levels.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Worlds/level select.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Worlds/round.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/Luis Candara.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Worlds/3 stars.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Worlds/background1.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 1000
+font_data = ExtResource( 4 )
+
+[node name="LevelSelection" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 6.61584
+margin_top = 2.97714
+margin_right = 579.616
+margin_bottom = 1006.98
+
+[node name="level select" type="Sprite" parent="."]
+position = Vector2( 292.92, 146.587 )
+scale = Vector2( 0.150651, 0.20109 )
+texture = ExtResource( 2 )
+
+[node name="Levels" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Level1" type="Sprite" parent="Levels"]
+position = Vector2( 128.432, 321.16 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Levels/Level1"]
+margin_left = -82.0095
+margin_top = -617.99
+margin_right = 85.9905
+margin_bottom = 382.01
+custom_fonts/font = SubResource( 1 )
+text = "1"
+
+[node name="Stars" type="Sprite" parent="Levels/Level1"]
+position = Vector2( 1.47385, 402.737 )
+scale = Vector2( 1.41988, 1.60734 )
+texture = ExtResource( 5 )
+
+[node name="Level2" type="Sprite" parent="Levels"]
+editor/display_folded = true
+position = Vector2( 293.78, 322.83 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Levels/Level2"]
+margin_left = -82.0095
+margin_top = -617.99
+margin_right = 85.9905
+margin_bottom = 382.01
+custom_fonts/font = SubResource( 1 )
+text = "2"
+
+[node name="Stars" type="Sprite" parent="Levels/Level2"]
+position = Vector2( 1.47385, 402.737 )
+scale = Vector2( 1.41988, 1.60734 )
+texture = ExtResource( 5 )
+
+[node name="Level3" type="Sprite" parent="Levels"]
+editor/display_folded = true
+position = Vector2( 460.798, 324.501 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Levels/Level3"]
+margin_left = -82.0095
+margin_top = -617.99
+margin_right = 85.9905
+margin_bottom = 382.01
+custom_fonts/font = SubResource( 1 )
+text = "3"
+
+[node name="Stars" type="Sprite" parent="Levels/Level3"]
+position = Vector2( 1.47385, 402.737 )
+scale = Vector2( 1.41988, 1.60734 )
+texture = ExtResource( 5 )
+
+[node name="Level4" type="Sprite" parent="Levels"]
+editor/display_folded = true
+position = Vector2( 130.102, 528.263 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Levels/Level4"]
+margin_left = -82.0095
+margin_top = -617.99
+margin_right = 85.9905
+margin_bottom = 382.01
+custom_fonts/font = SubResource( 1 )
+text = "4"
+
+[node name="Stars" type="Sprite" parent="Levels/Level4"]
+position = Vector2( 1.47385, 402.737 )
+scale = Vector2( 1.41988, 1.60734 )
+texture = ExtResource( 5 )
+
+[node name="Level5" type="Sprite" parent="Levels"]
+editor/display_folded = true
+position = Vector2( 462.468, 531.603 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Levels/Level5"]
+margin_left = -82.0095
+margin_top = -617.99
+margin_right = 85.9905
+margin_bottom = 382.01
+custom_fonts/font = SubResource( 1 )
+text = "5"
+
+[node name="Stars" type="Sprite" parent="Levels/Level5"]
+position = Vector2( 1.47385, 402.737 )
+scale = Vector2( 1.41988, 1.60734 )
+texture = ExtResource( 5 )
+
+[node name="Level6" type="Sprite" parent="Levels"]
+editor/display_folded = true
+position = Vector2( 295.45, 529.933 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Levels/Level6"]
+margin_left = -146.781
+margin_top = -580.978
+margin_right = 114.219
+margin_bottom = 419.022
+custom_fonts/font = SubResource( 1 )
+text = "6"
+
+[node name="Stars" type="Sprite" parent="Levels/Level6"]
+position = Vector2( 1.47385, 402.737 )
+scale = Vector2( 1.41988, 1.60734 )
+texture = ExtResource( 5 )
+
+[node name="Level7" type="Sprite" parent="Levels"]
+editor/display_folded = true
+position = Vector2( 133, 731.075 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Levels/Level7"]
+margin_left = -82.0095
+margin_top = -617.99
+margin_right = 85.9905
+margin_bottom = 382.01
+custom_fonts/font = SubResource( 1 )
+text = "7"
+
+[node name="Stars" type="Sprite" parent="Levels/Level7"]
+position = Vector2( 1.47385, 402.737 )
+scale = Vector2( 1.41988, 1.60734 )
+texture = ExtResource( 5 )
+
+[node name="Level8" type="Sprite" parent="Levels"]
+editor/display_folded = true
+position = Vector2( 300.914, 736.242 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Levels/Level8"]
+margin_left = -146.781
+margin_top = -562.472
+margin_right = 144.219
+margin_bottom = 437.528
+custom_fonts/font = SubResource( 1 )
+text = "8"
+
+[node name="Stars" type="Sprite" parent="Levels/Level8"]
+position = Vector2( 1.47385, 402.737 )
+scale = Vector2( 1.41988, 1.60734 )
+texture = ExtResource( 5 )
+
+[node name="Level9" type="Sprite" parent="Levels"]
+editor/display_folded = true
+position = Vector2( 468.084, 733.528 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Levels/Level9"]
+margin_left = -82.0095
+margin_top = -664.256
+margin_right = 168.991
+margin_bottom = 335.744
+custom_fonts/font = SubResource( 1 )
+text = "9"
+
+[node name="Stars" type="Sprite" parent="Levels/Level9"]
+position = Vector2( 1.47385, 402.737 )
+scale = Vector2( 1.41988, 1.60734 )
+texture = ExtResource( 5 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_left = -135.242
+margin_top = 1.73248
+margin_right = 4730.76
+margin_bottom = 3001.73
+rect_scale = Vector2( 0.22, 0.4 )
+texture = ExtResource( 6 )

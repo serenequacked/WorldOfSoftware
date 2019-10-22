@@ -9,7 +9,7 @@ func _ready():
 
 func change_scene():
 	yield(get_tree().create_timer(1.2), "timeout")
-	get_tree().change_scene("res://Scenes/Worlds/WorldsScreen.tscn")
+	get_tree().change_scene("res://Scenes/Tutorial/Tutorial.tscn")
 
 func _on_Char1Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
