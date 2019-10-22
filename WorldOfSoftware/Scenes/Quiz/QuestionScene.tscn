@@ -1,16 +1,57 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Quiz/Question.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Quiz/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 45
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
 
 [node name="mainNode" type="Node2D"]
 script = ExtResource( 1 )
-questionTextPath = NodePath("Label")
-option1Path = NodePath("ButtonLayer/Option 1")
-option2Path = NodePath("ButtonLayer/Option 2")
-option3Path = NodePath("ButtonLayer/Option 3")
-option4Path = NodePath("ButtonLayer/Option 4")
+questionTextPath = NodePath("QnText")
+optionBtn1 = NodePath("ButtonLayer/TextureButton1")
+optionBtn2 = NodePath("ButtonLayer/TextureButton2")
+optionBtn3 = NodePath("ButtonLayer/TextureButton3")
+optionBtn4 = NodePath("ButtonLayer/TextureButton4")
+optionLabel1 = NodePath("OptionTextLayer/Option1Text")
+optionLabel2 = NodePath("OptionTextLayer/Option2Text")
+optionLabel3 = NodePath("OptionTextLayer/Option3Text")
+optionLabel4 = NodePath("OptionTextLayer/Option4Text")
+background = NodePath("BackgroundLayer/TextureRect")
+popupDialog = NodePath("PopupLayer/CanvasLayer/TextureButton")
+popupLabel = NodePath("PopupLayer/Label")
+scoreLabel = NodePath("CanvasLayer/Score")
 
-[node name="Label" type="Label" parent="."]
+[node name="QnText" type="Label" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -19,53 +60,165 @@ margin_left = 7.52979
 margin_top = 10.2649
 margin_right = 567.53
 margin_bottom = 130.265
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Question"
 align = 1
 valign = 1
 autowrap = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreTxt" type="Label" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -568.47
+margin_top = -124.0
+margin_right = -8.46973
+margin_bottom = -3.99988
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "  Current Score:"
+valign = 1
+autowrap = true
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -166.0
+margin_top = -124.0
+margin_right = -66.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="OptionTextLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Option1Text" type="Label" parent="OptionTextLayer"]
+margin_left = 9.0
+margin_top = 300.0
+margin_right = 569.0
+margin_bottom = 420.0
+custom_fonts/font = SubResource( 2 )
+text = "HELLOOOO"
+align = 1
+valign = 1
+
+[node name="Option2Text" type="Label" parent="OptionTextLayer"]
+margin_left = 9.0
+margin_top = 450.0
+margin_right = 569.0
+margin_bottom = 570.0
+custom_fonts/font = SubResource( 3 )
+text = "HELLOOOO"
+align = 1
+valign = 1
+
+[node name="Option3Text" type="Label" parent="OptionTextLayer"]
+margin_left = 9.0
+margin_top = 600.0
+margin_right = 569.0
+margin_bottom = 720.0
+custom_fonts/font = SubResource( 4 )
+text = "HELLOOOO"
+align = 1
+valign = 1
+
+[node name="Option4Text" type="Label" parent="OptionTextLayer"]
+margin_left = 9.0
+margin_top = 750.0
+margin_right = 569.0
+margin_bottom = 870.0
+custom_fonts/font = SubResource( 5 )
+text = "HELLOOOO"
+align = 1
+valign = 1
+
 [node name="ButtonLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+layer = -2
 
-[node name="Option 1" type="Button" parent="ButtonLayer"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -567.0
-margin_top = -864.0
-margin_right = -7.0
-margin_bottom = -744.0
-text = "1"
+[node name="TextureButton1" type="TextureButton" parent="ButtonLayer"]
+margin_left = 9.0
+margin_top = 300.0
+margin_right = 569.0
+margin_bottom = 420.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
 
-[node name="Option 2" type="Button" parent="ButtonLayer"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -567.0
-margin_top = -724.0
-margin_right = -7.0
-margin_bottom = -604.0
-text = "2"
+[node name="TextureButton2" type="TextureButton" parent="ButtonLayer"]
+margin_left = 9.0
+margin_top = 450.0
+margin_right = 569.0
+margin_bottom = 570.0
+expand = true
 
-[node name="Option 3" type="Button" parent="ButtonLayer"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -567.0
-margin_top = -584.0
-margin_right = -7.0
-margin_bottom = -464.0
-text = "3"
+[node name="TextureButton3" type="TextureButton" parent="ButtonLayer"]
+margin_left = 9.0
+margin_top = 600.0
+margin_right = 569.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
 
-[node name="Option 4" type="Button" parent="ButtonLayer"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -567.0
-margin_top = -444.0
-margin_right = -7.0
-margin_bottom = -324.0
-text = "4"
+[node name="TextureButton4" type="TextureButton" parent="ButtonLayer"]
+margin_left = 9.0
+margin_top = 750.0
+margin_right = 569.0
+margin_bottom = 870.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -3
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundLayer"]
+margin_left = -154.017
+margin_top = -1295.29
+margin_right = 4711.98
+margin_bottom = 1704.71
+
+[node name="PopupLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Label" type="Label" parent="PopupLayer"]
+visible = false
+margin_left = 20.0
+margin_top = 120.0
+margin_right = 550.0
+margin_bottom = 420.0
+custom_fonts/font = SubResource( 6 )
+text = "CORRECT!"
+align = 1
+valign = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PopupLayer"]
+
+[node name="TextureButton" type="TextureButton" parent="PopupLayer/CanvasLayer"]
+visible = false
+margin_left = 40.0
+margin_top = 120.0
+margin_right = 540.0
+margin_bottom = 470.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+[connection signal="pressed" from="ButtonLayer/TextureButton1" to="." method="_on_TextureButton1_pressed"]
+[connection signal="pressed" from="ButtonLayer/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="ButtonLayer/TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="ButtonLayer/TextureButton4" to="." method="_on_TextureButton4_pressed"]
